@@ -25,6 +25,10 @@ print(type(num_char))
 new_num_char = str(num_char)
 print("Your number is " + new_num_char + ". How lucky!")
 
+# MATH OPERATORS
+# '**' raises number to power of a number
+print(2 ** 3)
 
 # Note
 # - You can't combine string with int without conversions
+# - When using '/' divide operator the results will always be float
