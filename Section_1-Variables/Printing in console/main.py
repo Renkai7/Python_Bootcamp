@@ -2,5 +2,8 @@
 print("Hello Champion!")
 
 # String manipulation
-# You can create a next line using '\n'
+# Create new line using '\n'
 print("Hello world!\nIt is a wonderful day!")
+
+# Combine strings using '+'
+print("Hello" + " Ren")
