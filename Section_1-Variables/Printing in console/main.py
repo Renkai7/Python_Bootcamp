@@ -2,8 +2,11 @@
 print("Hello Champion!")
 
 # String manipulation
-# Create new line using '\n'
+#   Create new line using '\n'
 print("Hello world!\nIt is a wonderful day!")
 
-# Combine strings using '+'
+#   Combine strings using '+'
 print("Hello" + " Ren")
+
+#   Input function
+input("What is your name? ")
