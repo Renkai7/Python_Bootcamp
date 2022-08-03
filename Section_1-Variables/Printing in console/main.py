@@ -10,3 +10,6 @@ print("Hello" + " Ren")
 
 #   Input function
 input("What is your name? ")
+#   Concatenate Hello string with input - read print() first but needs to wait for input
+print("Hello " + input("What is your name? "))
+
