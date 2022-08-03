@@ -4,3 +4,7 @@ weight = input("enter your weight in kg: ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
+
+bmi = int(height) / float(weight) ** 2
+print(int(bmi))
+
