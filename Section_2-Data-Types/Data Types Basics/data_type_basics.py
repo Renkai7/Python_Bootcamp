@@ -26,8 +26,23 @@ new_num_char = str(num_char)
 print("Your number is " + new_num_char + ". How lucky!")
 
 # MATH OPERATORS
-# '**' raises number to power of a number
+#   '**' raises number to power of a number
 print(2 ** 3)
+#   round() will round numbers
+print(round(8 / 3))
+#   round(num, x) allows you to round number by decimal place of choice
+# this rounds to 2 decimal places
+print(round(8 / 3, 2))
+#   '//' operator gets whole number without converting into int
+print(8 // 3)
+#   '+=, -=, *=, /=' manipulate previous value
+
+# F STRING
+#   f string allows you to add values into a string
+score = 1
+height = 1.8
+isWinning = True
+print(f"Your score is {score}, your height is {height}, you are winning is {isWinning}")
 
 # Note
 # - You can't combine string with int without conversions
