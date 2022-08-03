@@ -1,4 +1,4 @@
-# Data Types
+# DATA TYPES
 
 # String
 #   Subscripting - pulling character out of a string
@@ -15,3 +15,16 @@ print(3.14141)
 # Boolean - True or False values
 truth = True
 deceit = False
+
+# TYPE ERROR, TYPE CHECKING and TYPE CONVERSION
+#   type() gives the type of data something is
+num_char = 4
+print(type(num_char))
+
+#   Convert int into str
+new_num_char = str(num_char)
+print("Your number is " + new_num_char + ". How lucky!")
+
+
+# Note
+# - You can't combine string with int without conversions
