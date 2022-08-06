@@ -1,10 +1,10 @@
 # 🚨 Don't change the code below 👇
-height = input("enter your height in m: ")
-weight = input("enter your weight in kg: ")
+height = float(input("enter your height in m: "))
+weight = float(input("enter your weight in kg: "))
 # 🚨 Don't change the code above 👆
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 
-bmi = int(height) / float(weight) ** 2
-print(int(bmi))
+bmi = round(weight / height ** 2)
+print(bmi)
 
