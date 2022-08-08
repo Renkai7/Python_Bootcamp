@@ -6,6 +6,8 @@ names = names_string.split(", ")
 # 🚨 Don't change the code above 👆
 
 # Write your code below this line 👇
+
+# Choose random item in a list
 name_list_length = len(names)
 random_num = random.randint(0, name_list_length - 1)
 winner = names[random_num]
