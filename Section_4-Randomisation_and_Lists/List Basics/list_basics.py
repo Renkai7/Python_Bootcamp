@@ -9,24 +9,33 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
 
 print(states_of_america)
 
-dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears",
-               "Tomatoes", "Celery", "Potatoes"]
-
 # Lists
 #   choose item in list by position with [0]
-print(states_of_america[0])
+# print(states_of_america[0])
 #   find item at end of list by using [-1]
 #   negative counts backwards
-print(states_of_america[-1])
+# print(states_of_america[-1])
 
 #   change list item
-states_of_america[1] = "Pencilvania"
-print(states_of_america)
+# states_of_america[1] = "Pencilvania"
+# print(states_of_america)
 
 #   add item to list using append() function
-states_of_america.append("Angelaland")
-print(states_of_america)
+# states_of_america.append("Angelaland")
+# print(states_of_america)
 
 #  add lists to a list using extend() function
-states_of_america.extend(["Disneyland", "Nintendo World", "Fantasy Land"])
-print(states_of_america)
+# states_of_america.extend(["Disneyland", "Nintendo World", "Fantasy Land"])
+# print(states_of_america)
+
+# Nested Lists
+# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears",
+#                "Tomatoes", "Celery", "Potatoes"]
+
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+#   place two lists within one list as separate lists
+dirty_dozen = [fruits, vegetables]
+print(fruits)
+print(dirty_dozen)
