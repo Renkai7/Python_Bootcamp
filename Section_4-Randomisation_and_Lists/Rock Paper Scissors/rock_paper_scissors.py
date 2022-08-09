@@ -43,6 +43,7 @@ else:
 
     cpu_choice = options_list[random_option]
 
+    # User chose Rock
     if user_choice == options_list[0]:
         if cpu_choice == options_list[0]:
             print(f"{user_choice} vs. {cpu_choice} Both rock. TIE!")
@@ -51,6 +52,7 @@ else:
         else:
             print(f"{user_choice} vs. {cpu_choice} Rock beats scissors. You win!")
 
+    # User chose paper
     if user_choice == options_list[1]:
         if cpu_choice == options_list[0]:
             print(f"{user_choice} vs. {cpu_choice} Paper beats rock. You win!")
@@ -59,6 +61,7 @@ else:
         else:
             print(f"{user_choice} vs. {cpu_choice} Rock beats scissors. You lose.")
 
+    # User chose scissors
     if user_choice == options_list[2]:
         if cpu_choice == options_list[0]:
             print(f"{user_choice} vs. {cpu_choice} Rock beats scissors. You lose.")
