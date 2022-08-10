@@ -5,3 +5,6 @@ fruits = ["Apple", "Peach", "Pear"]
 for fruit in fruits:
     print(fruit)
     print(fruit + " Pie")
+
+# Notes
+#  - rule of thumb: use singular word for items in a list (ex. fruit for fruits list)
