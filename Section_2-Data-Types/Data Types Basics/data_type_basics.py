@@ -44,6 +44,8 @@ height = 1.8
 isWinning = True
 print(f"Your score is {score}, your height is {height}, you are winning is {isWinning}")
 
+print(type(8 // 2))
+
 # Note
 # - You can't combine string with int without conversions
 # - When using '/' divide operator the results will always be float
