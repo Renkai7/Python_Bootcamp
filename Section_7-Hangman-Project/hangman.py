@@ -62,6 +62,8 @@ lives = 6
 # Choose random word from list
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
+# Loop until user guesses all letters
+end_of_game = False
 
 print(f'Pssst, the solution is {chosen_word}.')
 
@@ -70,8 +72,6 @@ for _ in range(word_length):
     display.append("_")
 print(display)
 
-# Loop until user guesses all letters
-end_of_game = False
 
 # Display initial hangman
 print(stages[lives])
