@@ -1,62 +1,7 @@
 import random
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+from hangman_art import logo, stages
+from hangman_words import word_list
 
-word_list = ["aardvark", "baboon", "camel"]
 display = []
 lives = 6
 # Choose random word from list
@@ -64,6 +9,8 @@ chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 # Loop until user guesses all letters
 end_of_game = False
+
+print(logo)
 
 print(f'Pssst, the solution is {chosen_word}.')
 
