@@ -14,9 +14,7 @@ def greet_with_name(name):
     print(f"Welcome to the program {name}.")
 
 
-# greet_with_name("Angela")
-
-
+greet_with_name("Angela")
 
 # Notes
 # Parameter vs. Argument
