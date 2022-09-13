@@ -145,6 +145,11 @@ def coffee_machine():
                 user_payment = process_transaction()
                 # CHECK IF USER HAS ENOUGH MONEY
                 if transaction_is_successful(user_payment, user_drink):
+                    # GET USER CHANGE FOR OVERPAYMENT
+                    if user_payment > MENU[user_drink]["cost"]:
+                        change = user_payment - MENU[user_drink]["cost"]
+                        user_payment = user_payment - change
+                        print(f"Your change is: ${change}")
                     # UPDATE MACHINE RESOURCES
                     machine_resources["money"] += user_payment
                     machine_resources = update_resources(machine_resources, MENU[user_drink])
