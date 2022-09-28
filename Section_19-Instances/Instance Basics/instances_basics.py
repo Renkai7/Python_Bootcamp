@@ -21,6 +21,7 @@ def clockwise():
     tim.left(10)
     move_forward()
 
+
 def clear_screen():
     tim.clear()
     tim.reset()
