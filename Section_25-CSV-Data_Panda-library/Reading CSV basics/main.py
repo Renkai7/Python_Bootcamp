@@ -60,7 +60,7 @@ data_dict = {
 
 my_data = pandas.DataFrame(data_dict)
 # Create a CSV file
-data.to_csv("new_data.csv")
+my_data.to_csv("new_data.csv")
 
 # Notes
 # Pandas Library makes using data easier
