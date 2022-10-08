@@ -41,7 +41,7 @@ def save_password():
                                            message=f"These are the details entered: \nUsername: {username} \n"
                                                    f"Password: {password} \nWould you like to save?")
         if is_saving:
-            with open("password.txt", mode="w") as file:
+            with open("password.txt", mode="a") as file:
                 file.write(f"{website} | {username} | {password}\n")
                 website_entry.delete(0, END)
                 password_entry.delete(0, END)
