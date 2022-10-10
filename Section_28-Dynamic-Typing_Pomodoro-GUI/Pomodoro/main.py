@@ -12,12 +12,12 @@ SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 REPS = 0
 check_list = []
-timer = None
+flip_timer = None
 
 
 # ---------------------------- TIMER RESET ------------------------------- #
 def reset_timer():
-    window.after_cancel(timer)
+    window.after_cancel(flip_timer)
     canvas.itemconfig(timer_text, text="00:00")
     timer_label.config(text="Timer")
     check_list.clear()
@@ -59,7 +59,7 @@ def count_down(count):
 
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
-        global timer
+        global flip_timer
         # after() executes command after a time delay
         timer = window.after(1000, count_down, count - 1)
     else:
