@@ -61,8 +61,8 @@ card_back_img = PhotoImage(file="images/card_back.png")
 canvas_image = canvas.create_image(400, 263, image=card_front_img)
 canvas.grid(column=0, row=0, columnspan=2)
 # Front Card - Title & Word text
-card_title = canvas.create_text(400, 150, text="Title", font=("Ariel", 40, "italic"))
-card_word = canvas.create_text(400, 263, text="Word", font=("Ariel", 60, "bold"))
+card_title = canvas.create_text(400, 150, text="Title", font=("Arial", 40, "italic"))
+card_word = canvas.create_text(400, 263, text="Word", font=("Arial", 60, "bold"))
 # Front Card buttons
 wrong_image = PhotoImage(file="images/wrong.png")
 wrong_button = Button(image=wrong_image, highlightthickness=0, command=generate_card)
