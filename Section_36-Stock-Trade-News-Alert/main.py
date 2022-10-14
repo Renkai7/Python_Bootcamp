@@ -43,7 +43,7 @@ day_before_yesterday_stock = float(stock_data["Time Series (Daily)"][day_before_
 stock_value_difference = abs(yesterday_stock - day_before_yesterday_stock)
 percentage_difference = round((stock_value_difference / day_before_yesterday_stock) * 100, 2)
 
-if percentage_difference < 5:
+if percentage_difference > 5:
     # Get News data
     news_response = requests.get(news_endpoint, params=news_parameters)
     news_response.raise_for_status()
