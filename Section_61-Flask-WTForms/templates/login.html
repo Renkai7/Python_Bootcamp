@@ -2,9 +2,9 @@
 {% from 'bootstrap/form.html' import render_form, render_field %}
 {% import "bootstrap/form.html" as wtf %}
 {% block content %}
-        <div class="container">
-		<h1>Login</h1>
+<div class="container">
+    <h1>Login</h1>
 
-			{{ wtf.render_form(form, novalidate=True) }}
-        </div>
+    {{ wtf.render_form(form, novalidate=True) }}
+</div>
 {% endblock %}

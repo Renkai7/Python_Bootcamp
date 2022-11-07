@@ -1,17 +1,24 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
+from wtforms import StringField, SubmitField, SelectField, URLField
+from wtforms.validators import DataRequired, URL
 import csv
+import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-Bootstrap(app)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+bootstrap = Bootstrap(app)
 
 
 class CafeForm(FlaskForm):
     cafe = StringField('Cafe name', validators=[DataRequired()])
+    location = URLField('Cafe Location on Google Maps (URL)', validators=[URL()])
+    open_time = StringField('Opening Time e.g. 8AM')
+    closing_time = StringField('Closing Time e.g. 5:30PM')
+    rating = SelectField('Coffee Rating', choices=['☕', '☕☕', '☕☕☕', '☕☕☕☕', '☕☕☕☕☕'])
+    wifi_strength = SelectField('Wifi Strength Rating', choices=['✘', '💪', '💪💪', '💪💪💪', '💪💪💪💪', '💪💪💪💪💪'])
+    power_socket = SelectField('Power Socket Availability', choices=['✘', '🔌', '🔌🔌', '🔌🔌🔌', '🔌🔌🔌🔌', '🔌🔌🔌🔌🔌'])
     submit = SubmitField('Submit')
 
 
@@ -30,11 +37,16 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/add')
+@app.route('/add', methods=['GET', 'POST'])
 def add_cafe():
     form = CafeForm()
     if form.validate_on_submit():
         print("True")
+        with open('cafe-data.csv', 'a', encoding='utf8') as data_file:
+            csv_writer = csv.writer(data_file)
+            csv_writer.writerow([form.cafe.data, form.location.data, form.open_time.data, form.closing_time.data,
+                                 form.rating.data, form.wifi_strength.data, form.power_socket.data])
+        return redirect(url_for('cafes'))
     # Exercise:
     # Make the form write a new row into cafe-data.csv
     # with   if form.validate_on_submit()
@@ -43,7 +55,7 @@ def add_cafe():
 
 @app.route('/cafes')
 def cafes():
-    with open('cafe-data.csv', newline='') as csv_file:
+    with open('cafe-data.csv', newline='', encoding='utf8') as csv_file:
         csv_data = csv.reader(csv_file, delimiter=',')
         list_of_rows = []
         for row in csv_data:
