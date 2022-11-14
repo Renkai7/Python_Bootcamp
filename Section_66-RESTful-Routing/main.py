@@ -70,7 +70,8 @@ def search_cafes():
         return error
 
 
-@app.route("/add", methods=['GET', 'POST'])
+# HTTP POST - Create Record
+@app.route("/add", methods=['POST'])
 def add_cafe():
     new_cafe = Cafe(
         name=request.form.get("name"),
@@ -88,8 +89,6 @@ def add_cafe():
     db.session.commit()
     return jsonify(response={"Success": "Successfully added the new cafe."})
 
-
-## HTTP POST - Create Record
 
 # HTTP PUT/PATCH - Update Record
 @app.route("/update-price/<int:cafe_id>", methods=['PATCH'])
