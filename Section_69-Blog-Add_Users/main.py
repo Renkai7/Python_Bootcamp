@@ -52,6 +52,8 @@ def admin_only(f):
 
 
 ##CONFIGURE TABLES
+# Define the columns of the table using SQLAlchemy Column types
+# The types correspond to SQL data types such as integer, string, text, and so on
 class BlogPost(db.Model):
     __tablename__ = "blog_posts"
     id = db.Column(db.Integer, primary_key=True)
@@ -95,6 +97,16 @@ db.create_all()
 
 @app.route('/')
 def get_all_posts():
+    """Retrieve all blog posts and render the index template.
+    This function retrieves all blog posts from the database using the
+    `BlogPost.query.all()` method. It then passes the retrieved posts
+    and the current user to the `render_template` method to render the
+    "index.html" template.
+
+    Returns:
+        The rendered "index.html" template with the retrieved blog posts
+        and the current user as arguments.
+    """
     posts = BlogPost.query.all()
     return render_template("index.html", all_posts=posts, current_user=current_user)
 
