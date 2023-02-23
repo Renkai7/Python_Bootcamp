@@ -1,3 +1,8 @@
+# Blog Demonstration
+![alt text](https://media.giphy.com/media/kD63dZQidgln2XncsU/giphy.gif)
+
+[//]: # (<iframe src="https://giphy.com/embed/kD63dZQidgln2XncsU" width="480" height="272" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/kD63dZQidgln2XncsU">via GIPHY</a></p>)
+
 # How I worked on this project
 My goal was to create a blog website that allows authorized users to: create, update, and delete posts.
 
